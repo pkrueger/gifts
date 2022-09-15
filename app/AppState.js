@@ -6,6 +6,9 @@ import { loadState } from "./Utils/Store.js";
 class AppState extends EventEmitter {
   /** @type {import('./Models/Gift').Gift[]} */
   gifts = [];
+
+  /** @type {import('./Models/Search').Search[]} */
+  searches = [];
 }
 
 export const appState = new Proxy(new AppState(), {

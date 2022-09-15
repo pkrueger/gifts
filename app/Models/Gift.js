@@ -14,7 +14,7 @@ export class Gift {
   get GiftTemplate() {
     return /*html*/ `
     <div class="col-4">
-      <div class="card p-5 my-2">
+      <div class="card p-3 my-2">
         <img
           src="${this.opened ? this.url : '/assets/img/gift.png'}"
           alt="present"

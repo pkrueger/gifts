@@ -33,7 +33,12 @@ export class GiftsController {
       const form = window.event.target;
       let formData = getFormData(form);
 
-      if (await Pop.confirm()) {
+      if (
+        await Pop.confirm(
+          "Do you want to submit this gift?",
+          "Everyone will be able to see it if you do!"
+        )
+      ) {
         await giftsService.addGift(formData);
 
         // @ts-ignore
